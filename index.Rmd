@@ -1,7 +1,8 @@
 ---
-title: "index"
+title: "Aula R Studio"
 output: ioslides_presentation
-date: "2024-08-07"
+widescreen: true
+date: "17-08-2024"
 ---
 
 ```{r setup, include=FALSE}
