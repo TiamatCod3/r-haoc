@@ -1,15 +1,29 @@
 ---
 title: "Aula R Studio"
-output: ioslides_presentation
+output: 
+  ioslides_presentation:
+    css: Estilo/styles.css
+    logo: Imagens/logo.png
 widescreen: true
-date: "17-08-2024"
+author: Tiago Matos
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## R Markdown
+
+## Introdução ao R {.flexbox .hcenter}
+
+- R é uma linguagem de programação e ambiente de software para análise estatística, gráficos e relatórios. É amplamente utilizado nas áreas de estatística e ciência de dados
+
+
+## Instalação e configuração
+
+- Download do R: [CRAN](https://cran.r-project.org/)
+- Download do Software: [RStudio](https://posit.co/downloads/)
+
+## R Markdown {.build }
 
 This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
