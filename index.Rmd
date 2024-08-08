@@ -1,49 +1,163 @@
 ---
 title: "Aula R Studio"
-output: 
+author: "Tiago Matos"
+widescreen: true
+output:
   ioslides_presentation:
     css: Estilo/styles.css
     logo: Imagens/logo.png
-widescreen: true
-author: Tiago Matos
+  slidy_presentation: default
+  beamer_presentation: default
 ---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
 ## Introdução ao R {.flexbox .hcenter}
 
-- R é uma linguagem de programação e ambiente de software para análise estatística, gráficos e relatórios. É amplamente utilizado nas áreas de estatística e ciência de dados
-
+`r fa(name = "r-project", fill = "steelblue")` é uma linguagem de programação e ambiente de software para análise estatística, gráficos e relatórios. É amplamente utilizado nas áreas de estatística e ciência de dados
 
 ## Instalação e configuração
 
 - Download do R: [CRAN](https://cran.r-project.org/)
 - Download do Software: [RStudio](https://posit.co/downloads/)
+- Vídeo de instalação: [Vídeo]
+- [Roteiro 1](Apostila/roteiro1.html)
 
-## R Markdown {.build }
+## Variáveis e tipos de dados
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Variáveis armazenam valores na memória
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Output
-
-```{r cars, echo = TRUE}
-summary(cars)
+### Atribuição de Variáveis:
+```{r, include=TRUE, echo=TRUE}
+#Usando "<-" ou "="
+x <- 10
+y <- "Hello, R!"
+z <- TRUE
 ```
 
-## Slide with Plot
+- Podem ser numéricos, caracteres, lógicos:
 
-```{r pressure, echo=TRUE}
-plot(pressure)
+```r
+ Numéricos: 10L (Inteiro), 0.1(Double)
+ Caracteres: "A" (Caracter), "Avaliação" (String)
+ Lógicos: True ou False
 ```
+
+## Operadores
+
+### Operadores Matemáticos
+Ordem de precedência:
+- potência(^ ou **) (direita para esquerda)
+```{r, include=TRUE, echo=TRUE}
+2**2
+```
+- divisão(/), multiplicação(*)
+- soma(+), subtração(-) 
+- resto(%%), quociente(%/%)
+
+<div style="text-align:center">
+<b align="center"> `r fa("exclamation-circle", fill = "steelblue")` Na dúvida usar parênteses!!</b>
+</div>
+
+## Operadores
+### Operadores lógicos
+- menor que(<), maior que(>), menor ou igual a(<=)  maior ou igual a (>=), igual(==), diferente(!=)
+- negação (!), e (& ou &&), ou (| ou ||)   
+```{r, include=TRUE, echo=TRUE}
+3 >= 2
+```
+## Operadores
+### Operadores especiais
+- sequência (:)
+```{r, include=TRUE, echo=TRUE}
+3:10 
+```
+- pertencimento (%in% e %!in%):
+```{r, include=TRUE, echo=TRUE}
+5 %in% c(1, 3, 5, 7)
+```
+## Roteiro
+
+[Roteiro 2](Apostila/roteiro2.html)
+
+
+## Exercício 1
+
+#### - Calcule a média do seguinte conjunto de dados usando os operadores matemáticos e atribua a uma variável chamada media. $\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n}$
+
+#### - Calcule a variância usando operadores matemáticos e atribua a uma variável.$\sigma^2 = \frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}$
+
+#### - Calcule o desvio padrão do conjunto e atribua a uma variável.$\sigma = \sqrt{\frac{\sum_{i=1}^{N} (x_i - \mu)^2}{N}}$
+
+#### - Calcule o coeficiente de variação e atribua a uma variável.$CV = \frac{\sigma}{\mu} \times 100\%$
+
+Dados = 75 , 87 ,  68 ,  55 , 27
+
+## Funções {.flexbox}
+### Usadas para realizar tarefas repetitivas e que podem ser parametrizadas. Podem processar uma entrada e retornar ou não um valor
+
+## Funções Nativas
+* Matemáticas - log, exp, max, min, round, sum, mean, median, quantile
+
+* Texto - substr, grep, sub, paste, strsplit, tolower, toupper, nchar
+
+* Estatísticas - distribuição normal , Poison, binomial, uniforme, modelo linear
+
+## Exercício 2
+
+### Crie uma função que calcula a média aritmética
+
+### Crie uma função que calcula o desvio padrão amostral ou populacional
+
+
+## Dados estruturados
+- Vetores
+- Listas
+- Matrizes/Arrays
+- Fatores
+- Dataframe
+- Fatores
+
+## Vetores
+### Conjunto de dados em uma sequência linear encadeada podendo ser ou não do mesmo tipo
+- Atômicos - mesmo tipo
+- Listas - tipos diferentes
+
+## Vetores atômicos
+- Criação
+```{r}
+c(1,2,3)
+rep(10, 5)
+seq(1, 10 , 2)
+```
+- Índice
+- Fatiamento    
+- Nomes de colunas
+
+
+## Matrizes
+
+## Listas
+
+## Data Frames
+
+## Exercício 3
+
+
+
+## Exercício 4
+
+## Importação de dados
+
+
+
+
+
 

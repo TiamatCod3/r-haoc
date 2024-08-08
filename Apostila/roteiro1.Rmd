@@ -1,0 +1,29 @@
+---
+title: "Roteiro 1 -  Ambiente de execução"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Interface do programa
+
+- Crie um novo projeto em file -> new project 
+
+- Crie um script em branco em file -> new file -> R Script  (Ctrl + Shift + N)
+
+- Salve o script como roteiro1
+
+- Defina o local do seu script como a pasta padrão do seu trabalho em Session -> Set Working Directory -> To source File location
+
+- Instalar e carregar os pacotes tidyverse
+
+```{r}
+#install.packages("tidyverse")
+
+library(tidyverse)
+```
+
+
+
