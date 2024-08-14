@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Download do R: [CRAN](https://cran.r-project.org/)
 - Download do Software: [RStudio](https://posit.co/downloads/)
-- Vídeo de instalação: [Vídeo]
+- Vídeo de instalação: [Vídeo](https://drive.google.com/file/d/1gfRx005Uy11ZQiwtGnIGKStlluEMfEIT/view?usp=drive_link)
 - [Roteiro 1](Apostila/roteiro1.html)
 
 ## Variáveis e tipos de dados
@@ -110,12 +110,18 @@ Dados = 75 , 87 ,  68 ,  55 , 27
 
 * Estatísticas - distribuição normal , Poison, binomial, uniforme, modelo linear
 
+
+## Roteiro 3
+[Roteiro 3](Apostila/roteiro3.html)
+
 ## Exercício 2
 
 ### Crie uma função que calcula a média aritmética
 
 ### Crie uma função que calcula o desvio padrão amostral ou populacional
 
+### Contar a ocorência de palavras "a" no texto abaixo:
+"Aprendendo R e Manipulação de Texto com exemplos de funções."
 
 ## Dados estruturados
 - Vetores
@@ -132,29 +138,109 @@ Dados = 75 , 87 ,  68 ,  55 , 27
 
 ## Vetores atômicos
 - Criação
-```{r}
+```{r, include=T, echo=T}
 c(1,2,3)
 rep(10, 5)
 seq(1, 10 , 2)
 ```
-- Índice
-- Fatiamento    
-- Nomes de colunas
+## Vetores atômicos
+- Índice - Começa em 1
+```{r, echo=T}
+dados <- seq(2,15,3)
+dados
+```
+- Fatiamento - Usar ":"
+```{r, echo=T}
+dados[1:2]
+```
 
+## Roteiro 4
+[Roteiro 4](Apostila/roteiro4.html)
 
-## Matrizes
-
-## Listas
-
-## Data Frames
 
 ## Exercício 3
 
 
+## Data Frames
+### Dataframes são uma estrutura de dados fundamental na linguagem R, projetada para armazenar dados em formato tabular, similar a uma tabela em um banco de dados ou uma planilha do Excel. Cada coluna em um dataframe pode conter um tipo diferente de dado (como numérico, fator, ou caractere), enquanto cada linha representa uma observação ou entrada individual.
+
+## Data Frames
+### Criação
+- A partir de vetores
+
+```{r, echo=T}
+df <- data.frame(
+  nome = c("Ana", "Bruno", "Carlos"),
+  idade = c(23, 35, 28),
+  sexo = c("F", "M", "M")
+)
+df
+
+```
+
+## Data Frames
+### Criação
+- Importando dados
+
+```{r, echo=T}
+# Importando um arquivo CSV para um dataframe
+df <- read.csv("Dados/arquivo.csv", header = T)
+df
+```
+
+## Data Frames
+### Exportando dados
+```{r, echo=T}
+df <- data.frame(
+  nome = c("Ana", "Bruno", "Carlos"),
+  idade = c(23, 35, 28),
+  sexo = c("F", "M", "M")
+)
+write.csv(df, "Dados/arquivo.csv", row.names = FALSE)
+```
+
+## Data Frames
+### Operações
+Incluindo coluna
+```{r, echo=T}
+df$altura <- c(1.65, 1.80, 1.75)
+df
+```
+
+## Data Frames
+### Operações
+Índice - df["nome"]
+
+Fatiamento - [1:2]
+```{r, echo=T}
+#Colunas
+df[1:2]
+
+```
+
+Filtro - Uso de operadores lógicos
+
+## Data Frames
+### Operações
+- nrow
+- ncol
+- colnames
+- dim
+
+## Roteiro 5
+[Roteiro 5](Apostila/roteiro5.html)
 
 ## Exercício 4
+Explorar o dataset pacientes-hap e custos-hap:
+1 - Calcular o percentual de pacientes que tiveram piora clínica e morreram
+2 - Verificar o maior custo associado com um tratamento e a qual tratamento pertence
+3 - Qual tratamento apresentou o maior percentual de piora clínica
+4 - Calcular a frequência de distribuição de gênero na tabela
+5 - Calcular a média e desvio padrão da idade do tratamento com Iloprosta + Bosentana
 
-## Importação de dados
+
+
+
 
 
 

@@ -1,0 +1,123 @@
+---
+title: "Roteiro 3 - Funções nativas e customizadas"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Funções Matemáticas
+
+```{r, include=T}
+
+dados <- c(75 , 87 ,  68 ,  55 , 27, 65)
+
+soma <- sum(dados)
+soma
+
+maximo <- max(dados)
+maximo
+
+exponencial <- log(dados)
+exponencial
+
+#Arredondamento
+round(62.6)
+
+round(62.4,0)
+
+round(c(63.5), 0)
+
+round(c(61.5), 0)
+
+ceiling(62.5)
+
+floor(62.5)
+
+```
+
+## Funções Estatísticas
+
+```{r}
+# Média
+media <- mean(dados)
+media
+
+#Mediana
+mediana = median(dados)
+mediana
+
+#Desvio-padrão
+desvio.padrao = sd(dados)
+
+#Variância
+variancia = var(dados)
+
+#Distribuição uniforme
+runif(10, min = 0, max = 1)
+```
+
+
+## Funções de Texto
+```{r}
+textos <- c("Aprendendo R", "Manipulação de Texto", "Análise de Dados", "Funções de Texto em R")
+textos
+
+# Comprimento das strings
+comprimento <- nchar(textos)
+comprimento
+
+# Convertendo para maiúsculas
+maiusculas <- toupper(textos)
+maiusculas
+
+# Convertendo para minúsculas
+minusculas <- tolower(textos)
+minusculas
+
+# Extraindo os primeiros 10 caracteres usando substr
+substrings_substr <- substr(textos, 1, 10)
+substrings_substr
+
+# Extraindo os primeiros 10 caracteres usando substring
+substrings_substring <- substring(textos, 1, 10)
+substrings_substring
+
+# Juntando strings com espaço
+juntado_espaco <- paste(textos, collapse = " ")
+juntado_espaco
+
+# Juntando strings sem delimitador
+juntado_nodelim <- paste0(textos, collapse = "")
+juntado_nodelim
+
+# Substituindo "R" por "R Programming"
+substituicao <- gsub("R", "R Programming", textos)
+substituicao
+
+# Substituindo apenas a primeira ocorrência de "Texto" por "Texto Manipulado"
+substituicao_sub <- sub("Texto", "Texto Manipulado", textos)
+substituicao_sub
+
+# Dividir as strings pelo espaço
+dividido <- strsplit(textos, " ")
+dividido
+
+# Encontrar a posição do padrão "Texto"
+grep("Texto", textos)
+
+# Verificar se o padrão "Dados" está presente
+presenca <- grepl("Dados", textos)
+presenca
+
+```
+
+
+```{r}
+
+```
+
+
+
+

@@ -1,0 +1,90 @@
+---
+title: "Roteiro 4 - Vetores"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=T}
+# Vetor numérico
+vetor_numerico <- c(1, 2, 3, 4, 5)
+vetor_numerico
+
+# Vetor de caracteres
+vetor_caracteres <- c("maçã", "banana", "cereja")
+vetor_caracteres
+
+# Vetor lógico
+vetor_logico <- c(TRUE, FALSE, TRUE, FALSE)
+vetor_logico
+```
+
+```{r}
+# Acessar o segundo elemento do vetor numérico
+segundo_elemento <- vetor_numerico[2]
+segundo_elemento
+
+# Acessar o primeiro e o terceiro elemento do vetor de caracteres
+elementos_selecionados <- vetor_caracteres[c(1, 3)]
+elementos_selecionados
+
+# Modificar o terceiro elemento do vetor numérico
+vetor_numerico[3] <- 10
+vetor_numerico
+
+# Modificar o vetor lógico
+vetor_logico[2] <- TRUE
+vetor_logico
+
+# Calcular a soma dos elementos do vetor numérico
+soma <- sum(vetor_numerico)
+soma
+
+# Calcular a média dos elementos do vetor numérico
+media <- mean(vetor_numerico)
+media
+
+# Calcular o comprimento do vetor de caracteres
+comprimento_caracteres <- length(vetor_caracteres)
+comprimento_caracteres
+
+# Verificar quais elementos do vetor lógico são TRUE
+logico_true <- vetor_logico[vetor_logico]
+logico_true
+
+# Verificar quais elementos do vetor numérico são maiores que 3
+maiores_que_tres <- vetor_numerico[vetor_numerico > 3]
+maiores_que_tres
+
+# Ordenar o vetor numérico em ordem crescente
+vetor_numerico_ordenado <- sort(vetor_numerico)
+vetor_numerico_ordenado
+
+# Ordenar o vetor de caracteres em ordem alfabética
+vetor_caracteres_ordenado <- sort(vetor_caracteres)
+vetor_caracteres_ordenado
+
+# Combinar dois vetores numéricos
+vetor_numerico_comb <- c(vetor_numerico, c(6, 7, 8))
+vetor_numerico_comb
+
+# Unir dois vetores de caracteres
+vetor_caracteres_unidos <- c(vetor_caracteres, c("kiwi", "laranja"))
+vetor_caracteres_unidos
+
+# Remover o segundo elemento do vetor numérico
+vetor_numerico_removido <- vetor_numerico[-2]
+vetor_numerico_removido
+
+# Substituir a letra "banana" por "manga" no vetor de caracteres
+vetor_caracteres_substituido <- gsub("banana", "manga", vetor_caracteres_unidos)
+vetor_caracteres_substituido
+
+
+
+colnames(vetor_caracteres_substituido)
+```
+
+

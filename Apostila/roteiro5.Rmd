@@ -1,0 +1,76 @@
+---
+title: "Roteiro 5 - Data Frames"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r, include=T}
+# Criando um dataframe simples
+df <- data.frame(
+  nome = c("Ana", "Bruno", "Carlos"),
+  idade = c(23, 35, 28),
+  sexo = c("F", "M", "M")
+)
+
+```
+
+
+## Acessando um Data Frame
+```{r}
+#Acessar coluna por nome
+df$nome
+
+df["nome"]
+
+#Acessar coluna por índice
+df[, 1]
+
+#Acessar uma linha por índice
+df[1, ]
+
+#Acessar um valor específico
+df[1, "nome"]
+
+```
+
+## Explorando o Data Frame
+
+```{r}
+head(df)
+
+tail(df)
+
+summary(df)
+
+str(df)
+```
+
+
+## Manipulando o Data Frame
+
+```{r}
+#Adicionando coluna
+df$altura <- c(1.65, 1.80, 1.75)
+
+#Filtrando com base em uma condição
+df_filtrado <- subset(df, idade > 30)
+
+#Mesclando datframes
+df2 <- data.frame(nome = c("Ana", "Bruno"), peso = c(60, 80))
+df_completo <- merge(df, df2, by = "nome")
+df_completo
+```
+
+```{r}
+#Calculando a média de idade
+mean(df_completo$idade)
+
+#Calculando o desvio padrão da idade
+sd(df_completo$idade)
+```
+
+
