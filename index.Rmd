@@ -127,7 +127,6 @@ Dados = 75 , 87 ,  68 ,  55 , 27
 - Vetores
 - Listas
 - Matrizes/Arrays
-- Fatores
 - Dataframe
 - Fatores
 
