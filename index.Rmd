@@ -120,7 +120,7 @@ Dados = 75 , 87 ,  68 ,  55 , 27
 
 ### Crie uma função que calcula o desvio padrão amostral ou populacional
 
-### Contar a ocorência de palavras "a" no texto abaixo:
+### Contar a ocorrência de palavras "a" no texto abaixo:
 "Aprendendo R e Manipulação de Texto com exemplos de funções."
 
 ## Dados estruturados
@@ -159,6 +159,10 @@ dados[1:2]
 
 ## Exercício 3
 
+- Crie e junte os vetores abaixo, exclua os valores não numéricos, e calcule a média
+
+-- Vetor 1: 3, 17, 45, NA, "4", "teste"
+-- Vetor 2: 2, 100, c(10, 9), c("a", "d"), NA
 
 ## Data Frames
 ### Dataframes são uma estrutura de dados fundamental na linguagem R, projetada para armazenar dados em formato tabular, similar a uma tabela em um banco de dados ou uma planilha do Excel. Cada coluna em um dataframe pode conter um tipo diferente de dado (como numérico, fator, ou caractere), enquanto cada linha representa uma observação ou entrada individual.
@@ -225,17 +229,19 @@ Filtro - Uso de operadores lógicos
 - ncol
 - colnames
 - dim
+- fatores
 
 ## Roteiro 5
 [Roteiro 5](Apostila/roteiro5.html)
 
 ## Exercício 4
 Explorar o dataset pacientes-hap e custos-hap:
-1 - Calcular o percentual de pacientes que tiveram piora clínica e morreram
-2 - Verificar o maior custo associado com um tratamento e a qual tratamento pertence
-3 - Qual tratamento apresentou o maior percentual de piora clínica
-4 - Calcular a frequência de distribuição de gênero na tabela
-5 - Calcular a média e desvio padrão da idade do tratamento com Iloprosta + Bosentana
+
+1. Calcular o percentual de pacientes que tiveram piora clínica e morreram
+1. Calcular a frequência de distribuição de gênero na tabela
+1. Calcular a média e desvio padrão da idade do tratamento com Iloprosta + Bosentana
+1. Qual tratamento apresentou o maior percentual de piora clínica
+1. Verificar o maior custo associado com um tratamento e a qual tratamento pertence
 
 
 
