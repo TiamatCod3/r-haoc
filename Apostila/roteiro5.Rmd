@@ -55,15 +55,54 @@ str(df)
 ```{r}
 #Adicionando coluna
 df$altura <- c(1.65, 1.80, 1.75)
+```
 
+```{r}
 #Filtrando com base em uma condição
 df_filtrado <- subset(df, idade > 30)
+df_filtrado
+```
 
-#Mesclando datframes
-df2 <- data.frame(nome = c("Ana", "Bruno"), peso = c(60, 80))
+```{r}
+#Filtrando dados
+condicao <- df$idade>30
+condicao
+df[condicao,]
+```
+```{r}
+#Dados faltantes
+df[1,2] <- NA
+df
+# na.exclude(df)
+is.na(df)
+na.omit(df)
+```
+
+
+#Mesclando Data Frames
+```{r}
+df
+df2 <- data.frame(nome = c("Ana", "Bruno", "Carlos"), peso = c(60, 80, 70))
 df_completo <- merge(df, df2, by = "nome")
 df_completo
 ```
+
+#Agregações
+
+```{r}
+# Dataframe original
+df <- data.frame(
+  categoria = c("A", "B", "A", "B", "A", "C"),
+  valor = c(10, 20, 15, 25, 5, 30)
+)
+
+# Agregar com soma
+df_agregado <- aggregate(valor ~ categoria, data = df, mean)
+
+# Visualizando o resultado
+print(df_agregado)
+```
+
 
 ```{r}
 #Calculando a média de idade
@@ -71,6 +110,43 @@ mean(df_completo$idade)
 
 #Calculando o desvio padrão da idade
 sd(df_completo$idade)
+```
+```{r}
+#Usando o tapply
+# Dataframe original
+df <- data.frame(
+  categoria = c("A", "B", "A", "B", "A", "C"),
+  valor = c(10, 20, 15, 25, 5, 30)
+)
+
+# Soma por categoria usando tapply
+somas <- tapply(df$valor, df$categoria, sum)
+
+# Convertendo para dataframe
+df_agregado <- data.frame(categoria = names(somas), valor = as.numeric(somas))
+
+# Visualizando o resultado
+print(df_agregado)
+
+```
+
+#Ordenando
+
+```{r}
+order(df$valor)
+```
+```{r}
+# Ordenar pela coluna 'valor' em ordem crescente
+df_ordenado <- df[order(df$valor), ]
+
+# Visualizando o resultado
+print(df_ordenado)
+```
+
+```{r}
+rownames(df_ordenado) <- NULL
+print(df_ordenado)
+
 ```
 
 

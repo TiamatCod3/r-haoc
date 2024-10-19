@@ -232,7 +232,7 @@ Filtro - Uso de operadores lógicos
 - fatores
 
 ## Roteiro 5
-[Roteiro 5](Apostila/roteiro5.html)
+[Roteiro 5](Apostila/rotei2Q22wazro5.html)
 
 ## Exercício 4
 Explorar o dataset pacientes-hap e custos-hap:
